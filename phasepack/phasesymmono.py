@@ -16,8 +16,10 @@
 # <alistair muldal@pharm ox ac uk>
 
 
-import numpy as np
-from scipy.fftpack import fftshift, ifftshift
+#import numpy as np
+#from scipy.fftpack import fftshift, ifftshift
+import cupy as np
+from cupy.fft import fftshift, ifftshift
 
 from .tools import rayleighmode as _rayleighmode
 from .tools import lowpassfilter as _lowpassfilter

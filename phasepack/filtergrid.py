@@ -1,5 +1,7 @@
-import numpy as np
-from scipy.fftpack import ifftshift
+#import numpy as np
+#from scipy.fftpack import ifftshift
+import cupy as np
+from cupy.fft import fftshift, ifftshift
 
 
 def filtergrid(rows, cols):

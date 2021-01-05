@@ -1,10 +1,13 @@
-import numpy as np
-from scipy.fftpack import fftshift, ifftshift
+#import numpy as np
+#from scipy.fftpack import fftshift, ifftshift
+import cupy as np
+from cupy.fft import fftshift, ifftshift
 
 # Try and use the faster Fourier transform functions from the pyfftw module if
 # available
 try:
-    from pyfftw.interfaces.scipy_fftpack import fft2, ifft2
+    from cupyx.scipy.fftpack import fft2, ifft2
+    #from pyfftw.interfaces.scipy_fftpack import fft2, ifft2
 # Otherwise use the normal scipy fftpack ones instead (~2-3x slower!)
 except ImportError:
     import warnings
